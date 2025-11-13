@@ -1,0 +1,221 @@
+body {
+  background-color: #111111;
+  margin: 0;
+  overflow-x: hidden;
+  color:rgb(207, 207, 207);
+}
+
+/* h3,h4,h5,p{
+  color:#8a8282;
+} */
+
+h1 {
+  font-size: 50px;
+  font-weight: bolder;
+  background: -webkit-linear-gradient(#fff9f9, #8a8282);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+a.nav-link{
+  position: relative;
+  color: white;
+  width: max-content;
+}
+
+a.nav-link:hover{
+  color:rgb(5, 189, 2);
+}
+
+a.nav-link::before{
+  content: '';
+  background: linear-gradient(to right, rgb(0, 255, 85),rgb(0, 128, 109));
+  height:2px;
+  width: 0;
+  position: absolute;
+  bottom:0;
+  left: 0;
+  transition: 100ms;
+}
+
+a.nav-link:hover::before{
+  width: 100%;
+}
+
+/*.offcanvas {
+  z-index: 1050;
+}*/
+
+ .offcanvas .nav-link {
+  color: #000000;
+}
+
+/*.offcanvas .nav-link:hover {
+  color: #027127; /* Optional hover color
+} */
+
+.Behind{
+  padding: 1em 2em;
+  position: relative;
+  display: flex;
+  background-color: rgba(7, 234, 101, 0.531);
+  border: none;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  text-align: center;
+}
+
+.Behind::after{
+  content: '';
+  position:absolute;
+  height:102%;
+  width:100%;
+  border-radius: 0.5rem;
+  background-image: linear-gradient(to bottom,rgba(7, 234, 101, 0.531), #a8e6b6);
+  z-index: -1;
+  transition: all 0.7s;
+}
+/* .Behind{
+  transition: 0.2s;
+} */
+
+.Behind:hover{
+  z-index: 0;
+  box-shadow: 40px 0 100px #1987545e;
+  /* color:black; */
+  transform: scale(1.1);
+}
+
+@keyframes fadeInUp {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  100% {
+  opacity: 1;
+  transform: translateY(0);
+  }
+  }
+
+.fade-in-up {
+      animation: fadeInUp 1.2s ease-out forwards;
+  }
+
+.Behind-2{
+  background-color: rgba(32, 255, 125, 0.356);
+}
+
+.Behind-2::after{
+  background-image: linear-gradient(to bottom,rgba(24, 55, 37, 0.651), #a8e6b6);
+  transition: all 0.7s;
+}
+/* .Behind{
+  transition: 0.2s;
+} */
+
+.Behind-2:hover{
+  z-index: 0;
+  box-shadow: 40px 0 100px rgba(0, 255, 157, 0.403);
+  /* color:black; */
+  transform: scale(1.1);
+}
+
+.card::after{
+  transition: all 0.7s;
+}
+
+.card:hover{
+  box-shadow: 40px 0 100px rgba(0, 255, 157, 0.403);
+  /* color:black; */
+  transform: scale(1.1);
+}
+
+ul{
+  list-style: none;
+}
+
+.shiny-hover {
+  position: relative;
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: #198754; /* Bootstrap success green */
+  color: white;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.shiny-hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.6), transparent);
+  transform: skewX(-20deg);
+  transition: left 0.6s ease;
+}
+
+.shiny-hover:hover::before {
+  left: 100%;
+}
+
+.Behind-3{
+  background-color: rgba(32, 255, 125, 0.356);
+}
+
+.Behind-3::after{
+  background-image: linear-gradient(to bottom,rgba(24, 55, 37, 0.651), #a8e6b6);
+  transition: all 0.7s;
+}
+/* .Behind{
+  transition: 0.2s;
+} */
+
+.Behind-3:hover{
+  z-index: 0;
+  box-shadow: 10px 0 100px rgba(0, 255, 157, 0.403);
+  /* color:black; */
+  transform: scale(1.1);
+}
+
+.shiny-hovercard {
+  position: relative;
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: #198754;
+  color: white;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.shiny-hovercard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.6), transparent);
+  transform: skewX(-20deg);
+  transition: left 0.6s ease;
+}
+
+.shiny-hovercard:hover::before {
+  left: 100%;
+}
+
+.navbar-blur {
+  position: fixed;
+  top: 0;
+  width: 300px;
+  z-index: 1070;
+  background-color: rgba(128, 128, 128, 0.81); /* translucent grey */
+  /* backdrop-filter: blur(10px); */
+  /* border-bottom: 1px solid rgba(255, 255, 255, 0.1); optional subtle border */
+}
+.scroll-offset {
+  scroll-margin-top: 150px; /* Match your navbar height */
+}
